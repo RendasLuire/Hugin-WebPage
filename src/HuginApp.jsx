@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom"
+import "./styles/general.css"
 import NavBar from "./Components/NavBar"
 import FinancesPage from "./pages/FinancesPage"
 import CarsPage from "./pages/CarsPage"
@@ -7,9 +8,9 @@ import DashboardPage from "./pages/DashboardPage"
 
 const HuginApp = () => {
   return (
-    <>
-        <NavBar className="Crystal"/>
-        <div className="container">
+    <div className="grafito">
+        <NavBar/>
+        <div className="container grafito">
           <Routes>
               <Route path="/" element={<DashboardPage /> } />
               <Route path="/finances" element={<FinancesPage /> } />
@@ -18,7 +19,7 @@ const HuginApp = () => {
               <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
         </div>
-    </>
+    </div>
   )
 }
 
