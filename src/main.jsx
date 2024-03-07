@@ -1,8 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import HuginApp from './HuginApp'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <h1>Hello World Hugin</h1>
-  </React.StrictMode>,
+  <BrowserRouter >
+    <React.StrictMode>
+      <HuginApp />
+    </React.StrictMode>,
+  </BrowserRouter>
 )
